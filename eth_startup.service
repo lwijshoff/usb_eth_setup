@@ -5,7 +5,7 @@ After=network.target
 # You can change the name of the ethernet Interface to your liking by changing /etc/udev/rules.d/10-local-net.rules
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c "ip link set eth1 up && dhclient eth1"
+ExecStart=/bin/bash -c "ip link set enx6c6e071b7643 up && dhclient enx6c6e071b7643"
 RemainAfterExit=true
 
 [Install]

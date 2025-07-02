@@ -15,7 +15,7 @@ First, clone the repository or download the files to your machine:
 
 ```bash
 git clone https://github.com/lwijshoff/usb-ethernet-setup.git
-cd usb-ethernet-setup
+cd usb_ethernet_setup
 ```
 
 ### 2. Ensure Local Files Are Present
@@ -23,7 +23,7 @@ cd usb-ethernet-setup
 Make sure your `10-local-net.rules` and `eth_startup.service` files are in the same directory as the script. The directory should look like this:
 
 ```text
-usb-ethernet-setup/
+usb_ethernet_setup/
 ├── main.sh
 ├── 10-local-net.rules
 └── eth_startup.service

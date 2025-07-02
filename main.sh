@@ -8,7 +8,7 @@ LOCAL_UDEV_RULES="10-local-net.rules"
 LOCAL_SYSTEMD_SERVICE="eth_startup.service"
 
 # Define target paths
-UDEV_RULES_PATH="/etc/udev/rules.d/10-local-net.rules"
+#UDEV_RULES_PATH="/etc/udev/rules.d/10-local-net.rules"
 SYSTEMD_SERVICE_PATH="/etc/systemd/system/eth_startup.service"
 
 # Check for root user (required for the script to run)
@@ -29,10 +29,10 @@ if [[ ! -f "$LOCAL_SYSTEMD_SERVICE" ]]; then
 fi
 
 # Copy udev rule to the appropriate location
-echo "Copying udev rule to $UDEV_RULES_PATH..."
-cp "$LOCAL_UDEV_RULES" "$UDEV_RULES_PATH"
-chmod 644 "$UDEV_RULES_PATH"
-echo "Udev rule copied successfully."
+#cho "Copying udev rule to $UDEV_RULES_PATH..."
+#p "$LOCAL_UDEV_RULES" "$UDEV_RULES_PATH"
+#hmod 644 "$UDEV_RULES_PATH"
+#cho "Udev rule copied successfully."
 
 # Copy systemd service to the appropriate location
 echo "Copying systemd service to $SYSTEMD_SERVICE_PATH..."
@@ -45,11 +45,11 @@ echo "Checking and installing required dependencies..."
 
 # Update package list and install necessary packages
 apt update
-apt install -y dhclient systemd
+apt install -y isc-dhcp-client net-tools
 
 # Reload udev and systemd configurations
-echo "Reloading udev rules and systemd..."
-udevadm control --reload
+#cho "Reloading udev rules and systemd..."
+#devadm control --reload
 systemctl daemon-reload
 
 # Enable the systemd service to start at boot
