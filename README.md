@@ -14,7 +14,7 @@ This repository contains a script to automatically set up your USB Ethernet adap
 First, clone the repository or download the files to your machine:
 
 ```bash
-git clone https://github.com/lwijshoff/usb-ethernet-setup.git
+git clone https://github.com/lwijshoff/usb_ethernet_setup.git
 cd usb_ethernet_setup
 ```
 
