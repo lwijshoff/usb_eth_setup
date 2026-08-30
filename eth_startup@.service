@@ -1,0 +1,13 @@
+[Unit]
+Description=Automatic DHCP for %I
+After=network.target
+
+# You can change the name of the ethernet Interface to your liking by changing /etc/udev/rules.d/10-local-net.rules
+[Service]
+Type=oneshot
+ExecStart=/sbin/dhclient %I
+ExecStop=/sbin/dhclient -r %I
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

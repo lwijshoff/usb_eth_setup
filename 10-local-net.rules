@@ -1,1 +1,1 @@
-SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="6c:6e:07:1b:76:43", NAME="eth1"
+SUBSYSTEM=="net", ACTION=="add", BUS=="usb", KERNEL=="eth*|en*", NAME="usb-eth%n", TAG+="systemd", ENV{SYSTEMD_WANTS}="eth_startup@usb-eth%n.service"
